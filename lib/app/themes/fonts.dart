@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_mobile_app_boilerplate/app/themes/colors.dart'
-    as app_colors;
+import 'package:Indiana/app/themes/colors.dart' as app_colors;
 
 class AppFonts {
   static const TextStyle h1 = TextStyle(

@@ -1,4 +1,4 @@
-package com.example.flutter_mobile_app_boilerplate
+package fr.supdevinci.indiana
 
 import io.flutter.embedding.android.FlutterActivity
 

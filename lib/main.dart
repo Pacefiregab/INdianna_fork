@@ -2,25 +2,22 @@ import 'package:flutter/material.dart';
 
 import 'package:logging/logging.dart';
 
-import 'package:flutter_mobile_app_boilerplate/app/config/routes.dart';
-import 'package:flutter_mobile_app_boilerplate/app/views/home_page.dart';
-import 'package:flutter_mobile_app_boilerplate/app/utils/router.dart' 
-    as router;
-import 'package:flutter_mobile_app_boilerplate/app/config/config_file.dart'
-    as config;
-import 'package:flutter_mobile_app_boilerplate/app/themes/colors.dart'
-    as app_colors;
-import 'package:flutter_mobile_app_boilerplate/app/themes/fonts.dart'
-    as app_fonts;
+import 'package:Indiana/app/config/routes.dart';
+import 'package:Indiana/app/views/home_page.dart';
+import 'package:Indiana/app/utils/router.dart' as router;
+import 'package:Indiana/app/config/config_file.dart' as config;
+import 'package:Indiana/app/themes/colors.dart' as app_colors;
+import 'package:Indiana/app/themes/fonts.dart' as app_fonts;
 
 void main() {
-  if(config.LogConfig.enableLogging) {
-    Logger.root.level = Level.ALL; // Includes all severity levels (see at: https://pub.dev/packages/logging)
+  if (config.LogConfig.enableLogging) {
+    Logger.root.level = Level
+        .ALL; // Includes all severity levels (see at: https://pub.dev/packages/logging)
     Logger.root.onRecord.listen((record) {
       if (config.LogConfig.logToFile) {
         _logToFile(record);
       }
-      
+
       print('${record.level.name}: \n${record.time}: \n${record.message}');
     });
   }
@@ -38,8 +35,8 @@ void main() {
       ),
     );
   };
-  
-  Logger logger = Logger('MyApp');
+
+  Logger logger = Logger('Indiana App');
   logger.info('Starting app...');
   runApp(const MyApp());
 }

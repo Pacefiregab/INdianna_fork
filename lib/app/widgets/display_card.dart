@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_mobile_app_boilerplate/app/config/config_file.dart'
-    as config;
-import 'package:flutter_mobile_app_boilerplate/app/themes/fonts.dart'
-    as app_fonts;
+import 'package:Indiana/app/config/config_file.dart' as config;
+import 'package:Indiana/app/themes/fonts.dart' as app_fonts;
 
 class DisplayCard extends StatelessWidget {
   @override
