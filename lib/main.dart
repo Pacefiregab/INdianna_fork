@@ -1,3 +1,4 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 
 import 'package:logging/logging.dart';
@@ -45,12 +46,20 @@ void _logToFile(LogRecord record) {
   print('Writing log to file: ${record.level.name}: ${record.message}');
 }
 
+void setupCamera() {
+  WidgetsFlutterBinding.ensureInitialized();
+  final cameras = availableCameras();
+  cameras.then((value) {
+    print('Camera: $value');
+  });
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: config.appName,
       home: HomePage(),
       onGenerateRoute: router.generateRoute,
