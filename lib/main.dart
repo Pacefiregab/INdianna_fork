@@ -1,3 +1,4 @@
+import 'package:Indiana/app/views/main_page.dart';
 import 'package:Indiana/app/views/map_page.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
@@ -62,7 +63,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: config.appName,
-      home: MapPage(),
+      home: MainPage(),
       onGenerateRoute: router.generateRoute,
       initialRoute: GenericRoutes.homeRoute,
     );
